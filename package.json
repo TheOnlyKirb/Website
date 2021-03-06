@@ -1,0 +1,25 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "AJ Nicoloff's personal website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheOnlyKirb/Website.git"
+  },
+  "keywords": [
+    "personal",
+    "blog",
+    "windows98",
+    "purecss"
+  ],
+  "author": "AJ Nicoloff",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/TheOnlyKirb/Website/issues"
+  },
+  "homepage": "https://github.com/TheOnlyKirb/Website#readme"
+}
