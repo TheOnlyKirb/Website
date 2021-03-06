@@ -1,0 +1,51 @@
+/* Custom CSS - Huge thanks to 98.css's contributors for helping with most of the sites css!
+*
+* Feel free to use anything in this css file for your own site!
+*
+*
+*/
+
+body {
+    line-height: 1;
+    min-height: 100%;
+    position: relative; 
+  }
+html {
+    min-height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+    background-color: #008080; 
+}
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+#startbutton {
+  margin-top: 3px;
+  border: 1px solid black;
+}
+
+.startbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: block;
+    height: 28px;
+    width: 100vw;
+    background-color: #bdbebd;
+    border-top: 2px solid white;
+    padding: 5px;
+}
+
+.time {
+    display: inline-block;
+    height: 20px;
+    text-align: center;
+    padding: 4px;
+    border-top: 2px solid grey;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+}
+
+
