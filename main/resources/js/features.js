@@ -1,15 +1,11 @@
 function fetchUsrTime() {
-  var date = new Date()
-  var hour = updateTime(date.getHours())
-  var min = updateTime(date.getMinutes())
-  document.getElementById("clock").innerText = hour + ":" + min
-    setTimeout(function(){ fetchUsrTime() }, 1000)
-}
-function updateTime(k) {
-  if (k < 10) {
-    return "0" + k
-  }
-  else {
-    return k
-  }
+    var date = new Date()
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    document.getElementById("clock").innerText = hours + ':' + minutes + ' ' + ampm;
+    setTimeout(function () { fetchUsrTime() }, 1000)
 }

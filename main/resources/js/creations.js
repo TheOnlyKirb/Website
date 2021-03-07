@@ -1,7 +1,9 @@
-function spawnWindow(windowWidth, windowHeight, title, bodyText, buttonText, topPercent, leftPercent) {
+function spawnWindow(title, bodyText, buttonText, topPercent, leftPercent) {
     var errWindow = document.createElement("div")
+    var randMarkableId = Math.floor(Math.random()*1000)
+    errWindow.id = randMarkableId;
     errWindow.className = "window"
-    errWindow.style = `width: ${windowWidth}px; height: ${windowHeight}; margin: auto; position: absolute; top: ${topPercent}%; left: ${leftPercent}%; -ms-transform: translateX(-50%) translateY(-30%); -webkit-transform: translate(-50%,-30%); transform: translate(-50%,-30%);`
+    errWindow.style = `width: auto; height: auto; margin: auto; position: absolute; top: ${topPercent}%; left: ${leftPercent}%; -ms-transform: translateX(-50%) translateY(-30%); -webkit-transform: translate(-50%,-30%); transform: translate(-50%,-30%);`
     var titleBar = document.createElement("div")
     titleBar.className = "title-bar"
     errWindow.appendChild(titleBar)
@@ -13,20 +15,22 @@ function spawnWindow(windowWidth, windowHeight, title, bodyText, buttonText, top
     titleBarX.className = "title-bar-controls"
     var closeX = document.createElement("button")
     closeX.setAttribute("aria-label", "Close")
-    closeX.setAttribute("onclick", "closeWindow(this);")
+    closeX.setAttribute("aria-label", "Maximize")
+
+    closeX.setAttribute("onclick", `closeWindow(${randMarkableId});`)
     titleBarX.appendChild(closeX)
     titleBar.appendChild(titleBarX)
     var errWindowBody = document.createElement("div")
     var errWindowBodyP = document.createElement("p")
     var errWindowBodyButton = document.createElement("button")
     errWindowBody.className = "window-body"
-    errWindowBodyP.innerText = bodyText;
+    errWindowBodyP.innerHTML = bodyText;
     if(buttonText) errWindowBodyButton.innerText = buttonText
     errWindowBody.appendChild(errWindowBodyP)
     if(buttonText) errWindowBody.appendChild(errWindowBodyButton)
     errWindow.appendChild(errWindowBody)
     document.body.appendChild(errWindow);
 }
-function closeWindow(element) {
-    element.remove()
+function closeWindow(elementID) {
+    document.getElementById(elementID).remove()
 }

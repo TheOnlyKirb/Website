@@ -26,10 +26,16 @@ function dragElement(elmnt) {
 }
 function refreshDrag(elementClassName) {
     Array.from(document.getElementsByClassName(elementClassName)).forEach(element => {
-        dragElement(elementClassName);
+        dragElement(element);
     })
 }
 function toggleIcon(element, original, updated, revertMs) {
     element.src = `../resources/icons/${updated}`
-    if(revertMs) setTimeout(function() {element.src = `../resources/icons/${original}`}, revertMs)
+    if (revertMs) setTimeout(function () { element.src = `../resources/icons/${original}` }, revertMs)
+}
+function fullscreenWindow(element) {
+    element.style = "top: 0; right: 0; left: 0; z-index: 2 !important; width: 99.7%; height: 95.5%; position: absolute;"
+}
+function fullscreenContent(element) {
+    element.style = "top: 0; right: 0; left: 0; width: 99.5%; height: 90%;"
 }

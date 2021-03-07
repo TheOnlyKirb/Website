@@ -10,17 +10,32 @@
     <script src="../resources/js/interactions.js"></script>
     <script src="../resources/js/features.js"></script>
     <script src="../resources/js/media.js"></script>
+    <script src="../resources/js/windows/resume.js"></script>
 </head>
 
 <body>
     <div class="startbar">
         <img id="startbutton" src="../resources/icons/start.png"
-            onclick="toggleIcon(this, 'start.png', 'startPressed.png', 1400)">
-        <hr style="transform: rotate(90deg); width: 24px; display: block; height: 1px; float: left; margin-left: 50px; margin-top: 14px !important;">
+            onclick="toggleIcon(this, 'start.png', 'startPressed.png', 1000)">
+        <hr
+            style="transform: rotate(90deg); width: 24px; display: block; height: 1px; float: left; margin-left: 50px; margin-top: 14px !important;">
         <div class="clock">
             <p id="clock">Loading</p>
         </div>
     </div>
+    <div class="icon-spacer">
+        <div class="pure-g">
+            <div class="pure-u-1-24 desktopIconSlot">
+                <img class="desktopIcon" src="../resources/icons/bin.png">
+                <p class="desktopIconName">Recycle Bin</p>
+            </div>
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-1-24 desktopIconSlot" ondblclick="resumeWindow(); refreshDrag('window')">
+                <img class="desktopIcon" src="../resources/icons/document.png">
+                <p class="desktopIconName">Resume - AJ Nicoloff</p>
+            </div>
+        </div>
     </div>
 </body>
 

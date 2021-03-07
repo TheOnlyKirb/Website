@@ -9,9 +9,9 @@
 /* Import Microsoft Sans Serif - Default windows 98 font :) */
 @font-face {
     font-family: '98Serif';
-    src: url('../resources/fonts/micross.ttf') format('woff2'),
-         url('../resources/fonts/micross.ttf') format('woff'),
-         url('../resources/fonts/micross.ttf') format('truetype');
+    src: url('../fonts/micross.ttf') format('woff2'),
+         url('../fonts/micross.ttf') format('woff'),
+         url('../fonts/micross.ttf') format('truetype');
 }
 * {
     image-rendering: pixelated;
@@ -49,6 +49,7 @@ html {
     background-color: #bdbebd;
     border-top: 2px solid white;
     padding: 5px;
+    z-index: 10;
 }
 
 #clock {
@@ -68,4 +69,35 @@ html {
     border-right: 2px solid white;
     font-size: 12px;
 }
+#selectChecker {
+    border: 30px grey dashed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.icon-spacer {
+    padding: 15px;
+    z-index: 0 !important;
+}
+.desktopIconSlot {
+    padding-top: 5px; /* It felt too close to the icon /shrug */
+    height: auto;
+    width: auto;
+    border: 1px dotted transparent; /* If i apply the border now, there is no weird icon shift on interaction :) */
+}
+.desktopIconSlot:active {
+    border: 1px dotted black;
+}
+.desktopIcon {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.desktopIconName {
+    text-align: center;
+    padding: none;
+    margin-top: 3px;
+    width: auto;
+}
+
 
