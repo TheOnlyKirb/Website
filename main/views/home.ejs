@@ -8,22 +8,25 @@
     <link rel="stylesheet" type="text/css" href="../resources/css/pure.css">
     <script src="../resources/js/creations.js"></script>
     <script src="../resources/js/interactions.js"></script>
+    <script src="../resources/js/features.js"></script>
     <script src="../resources/js/media.js"></script>
 </head>
 
 <body>
     <div class="startbar">
-            <img id="startbutton" src="../resources/icons/start.png">
-    </div>
-    <div class="clock">
-
+        <img id="startbutton" src="../resources/icons/start.png"
+            onclick="toggleIcon(this, 'start.png', 'startPressed.png', 1400)">
+        <hr style="transform: rotate(90deg); width: 24px; display: block; height: 1px; float: left; margin-left: 50px; margin-top: 14px !important;">
+        <div class="clock">
+            <p id="clock">Loading</p>
+        </div>
     </div>
     </div>
 </body>
 
 
 <script>
-
+    document.onload = fetchUsrTime();
 </script>
 
 </html>

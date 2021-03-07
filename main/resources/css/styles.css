@@ -5,23 +5,37 @@
 *
 */
 
+
+/* Import Microsoft Sans Serif - Default windows 98 font :) */
+@font-face {
+    font-family: '98Serif';
+    src: url('../resources/fonts/micross.ttf') format('woff2'),
+         url('../resources/fonts/micross.ttf') format('woff'),
+         url('../resources/fonts/micross.ttf') format('truetype');
+}
+* {
+    image-rendering: pixelated;
+}
 body {
     line-height: 1;
     min-height: 100%;
-    position: relative; 
+    position: relative;
+    font-family: '98Serif';
   }
 html {
     min-height: 100%;
     overflow: scroll;
     overflow-x: hidden;
-    background-color: #008080; 
+    background-color: #008080;
+    font-family: '98Serif';
 }
 ::-webkit-scrollbar {
     width: 0;
     background: transparent;
 }
 #startbutton {
-  margin-top: 3px;
+    margin-top: 5px;
+  position: fixed;
   border: 1px solid black;
 }
 
@@ -37,15 +51,21 @@ html {
     padding: 5px;
 }
 
-.time {
-    display: inline-block;
+#clock {
+    margin-top: 4.5px;
+    margin-left: -0.5px; /* It does actually do something, just very small, but it bothered me hehe */
+}
+.clock {
+    float: right;
+    display: block;
     height: 20px;
     text-align: center;
     padding: 4px;
+    margin-right: 0.5%;
     border-top: 2px solid grey;
     border-left: 2px solid grey;
     border-bottom: 2px solid white;
     border-right: 2px solid white;
+    font-size: 12px;
 }
-
 

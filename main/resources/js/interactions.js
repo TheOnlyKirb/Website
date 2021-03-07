@@ -29,3 +29,7 @@ function refreshDrag(elementClassName) {
         dragElement(elementClassName);
     })
 }
+function toggleIcon(element, original, updated, revertMs) {
+    element.src = `../resources/icons/${updated}`
+    if(revertMs) setTimeout(function() {element.src = `../resources/icons/${original}`}, revertMs)
+}
