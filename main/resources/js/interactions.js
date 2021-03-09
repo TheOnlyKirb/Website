@@ -37,5 +37,5 @@ function fullscreenWindow(element) {
     element.style = "top: 0; right: 0; left: 0; z-index: 2 !important; width: 99.7%; height: 95.5%; position: absolute;"
 }
 function fullscreenContent(element) {
-    element.style = "top: 0; right: 0; left: 0; width: 99.5%; height: 90%;"
+    element.style = "top: 0; right: 0; left: 0; width: 99.5%; height: 95%;"
 }
