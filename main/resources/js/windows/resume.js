@@ -10,7 +10,7 @@ function resumeWindow() {
     resWindow.appendChild(titleBar)
     var titleBarText = document.createElement("div")
     titleBarText.className = "title-bar-text"
-    titleBarText.innerText = `Resume - AJ Nicoloff`
+    titleBarText.innerText = `Resume.pdf`
     titleBar.appendChild(titleBarText)
     var titleBarX = document.createElement("div")
     titleBarX.className = "title-bar-controls"
@@ -22,7 +22,7 @@ function resumeWindow() {
     maximizeX.setAttribute("onclick", `fullscreenWindow(document.getElementById(${randMarkableId})); fullscreenContent(document.getElementById(${randMarkIframe}))`)
     var minimizeX = document.createElement("button")
     minimizeX.setAttribute("aria-label", "Minimize")
-    minimizeX.setAttribute("onclick", `document.getElementById(${randMarkableId}).style.width = "300"; document.getElementById(${randMarkableId}).style.height = "auto"`)
+    minimizeX.setAttribute("onclick", `document.getElementById(${randMarkableId}).style.width = "300"; document.getElementById(${randMarkableId}).style.height = "auto"; minimize(${randMarkableId})`)
     titleBarX.appendChild(minimizeX)
     titleBarX.appendChild(maximizeX)
     titleBarX.appendChild(closeX)
@@ -31,7 +31,7 @@ function resumeWindow() {
     var resWindowBodyP = document.createElement("p")
     resWindowBodyP.style = "width: auto; height: 95%;"
     resWindowBody.className = "window-body"
-    resWindowBodyP.innerHTML = `<iframe id = '${randMarkIframe}' src='../resources/Resume.pdf'>`
+    resWindowBodyP.innerHTML = `<iframe style='overflow-x: hidden' id = '${randMarkIframe}' src='../resources/Resume.pdf'>`
     resWindowBody.appendChild(resWindowBodyP)
     resWindow.appendChild(resWindowBody)
     document.body.appendChild(resWindow)

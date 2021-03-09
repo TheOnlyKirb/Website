@@ -39,3 +39,15 @@ function fullscreenWindow(element) {
 function fullscreenContent(element) {
     element.style = "top: 0; right: 0; left: 0; width: 99.5%; height: 95%;"
 }
+function minimize(elementID) {
+    document.getElementById(elementID).style.display = "none"
+}
+function unminimize(elementID) {
+    document.getElementById(elementID).style.display = "inline-block"
+}
+function selectUser(element) {
+    element.style = "background-color: navy; color: white;"
+}
+function logIn() {
+    setTimeout(function() {document.getElementById("loginScreen").style.display = "none"}, 7500)
+}

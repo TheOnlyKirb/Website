@@ -14,6 +14,32 @@
 </head>
 
 <body>
+    <div class="loginScreen" id="loginScreen">
+        <div class="window" style="width: 300px" id="loginWindow">
+            <div class="title-bar">
+                <div class="title-bar-text">Enter Password</div>
+            </div>
+            <div class="window-body">
+                <img class="loginPng" src="../media/login.png">
+                <br>
+                <br>
+                <p style="margin-bottom: 3px;">Select user name</p>
+                <div class="userSelect">
+                    <div class="guestSelect" id="guestSelect" onclick="selectUser(this)">Guest</div>
+                    <div class="guestSelect">&nbsp;</div>
+                    <div class="guestSelect">&nbsp;</div>
+                </div>
+                <p style="margin-bottom: 3px;">Password</p>
+                <input style="width: 100%;" type="password"></input>
+                <br>
+                <br>
+                <button style="display: inline-block;" onclick="playMp3(0, 'startup.mp3'); logIn()">Okay</button>
+                <button style="display: inline-block;" onclick="this.innerText = 'No'">Cancel</button>
+
+
+            </div>
+        </div>
+    </div>
     <div class="startbar">
         <img id="startbutton" src="../resources/icons/start.png"
             onclick="toggleIcon(this, 'start.png', 'startPressed.png', 1000)">
@@ -36,7 +62,7 @@
         <div class="pure-g">
             <div class="pure-u-1-24 desktopIconSlot" ondblclick="resumeWindow(); refreshDrag('window')">
                 <img class="desktopIcon" src="../resources/icons/document.png">
-                <p class="desktopIconName">Resume - AJ Nicoloff</p>
+                <p class="desktopIconName">Resume.pdf</p>
             </div>
         </div>
     </div>

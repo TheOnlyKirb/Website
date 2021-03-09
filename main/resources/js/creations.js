@@ -53,6 +53,7 @@ function addNewTaskbar(elementID) {
     // the less JS i use, the better tbh. and I'm already gonna use a lot so /shrug
     taskbarButton.className = elementID + " programButton"
     taskbarButton.style = "overflow-x: none;"
+    taskbarButton.setAttribute("onclick", `unminimize(${elementID})`)
     var icon = document.createElement("img")
     icon.src = "../resources/icons/" + iconName + ".png"
     taskbarButton.append(icon)
