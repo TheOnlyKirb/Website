@@ -19,7 +19,7 @@ module.exports = function (webserver) {
     });
     // homepage/main page/route is an exception!
     webserver.get("/", function (req, res) {
-        if(!req.query.v || !req.query.v !== "0.1") return res.redirect("/?v=0.1")
+        if(!req.query.v || req.query.v !== "0.1") return res.redirect("/?v=0.1")
         res.render("home.ejs")
     })
 }
