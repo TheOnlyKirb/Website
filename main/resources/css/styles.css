@@ -113,7 +113,7 @@ html {
     margin: auto;
     height: auto;
     width: 60%;
-    margin-left: 6%;
+    margin-left: 0%;
     max-width: 60% !important;
 }
 .programButton {
@@ -124,7 +124,7 @@ html {
     margin: auto;
     height: 75% !important;
     margin-right: 0.5%;
-    margin-top: 0.5%;
+    margin-top: 0.2%;
     color: black;
     text-align:left!important;
     background-color: rgb(219, 217, 217);
