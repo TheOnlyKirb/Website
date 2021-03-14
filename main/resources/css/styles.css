@@ -94,6 +94,8 @@ html {
     .desktopIconSlot:active {
         border: 1px dotted black;
     }
+   }
+   @media screen and (max-width: 480px) {
     div {
         width: calc(100vh) !important;
     }
