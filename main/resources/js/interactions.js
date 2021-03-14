@@ -1,6 +1,7 @@
 function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     elmnt.onmousedown = dragMouseDown;
+    elmnt.touchstart = dragMouseDown;
     function dragMouseDown(e) {
         e = e || window.event;
         e.preventDefault();
@@ -8,6 +9,7 @@ function dragElement(elmnt) {
         pos4 = e.clientY;
         document.onmouseup = closeDragElement;
         document.onmousemove = elementDrag;
+        document.ontouchmove = elementDrag;
     }
     function elementDrag(e) {
         e = e || window.event;
@@ -22,6 +24,7 @@ function dragElement(elmnt) {
     function closeDragElement() {
         document.onmouseup = null;
         document.onmousemove = null;
+        document.ontouchmove = null;
     }
 }
 function refreshDrag(elementClassName) {
