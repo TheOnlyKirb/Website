@@ -94,6 +94,9 @@ html {
     .desktopIconSlot:active {
         border: 1px dotted black;
     }
+    div {
+        width: calc(100vh) !important;
+    }
    }
 .desktopIcon {
     margin-left: auto;
