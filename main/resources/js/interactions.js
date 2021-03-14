@@ -48,6 +48,7 @@ function unminimize(elementID) {
 function selectUser(element) {
     element.style = "background-color: navy; color: white;"
 }
-function logIn() {
-    setTimeout(function() {document.getElementById("loginScreen").style.display = "none"}, 7500)
+function logIn(skip) {
+    if(!skip) setTimeout(function() {document.getElementById("loginScreen").style.display = "none"}, 7500)
+    else document.getElementById("loginScreen").style.display = "none"
 }

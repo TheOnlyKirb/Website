@@ -2,7 +2,7 @@
 
 <head>
     <title>Desktop | AJ Nicoloff</title>
-    <link rel="shortcut icon" type="image/ico" href="../media/favicon.ico"/>
+    <link rel="shortcut icon" type="image/ico" href="../media/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../resources/css/98.css">
     <link rel="stylesheet" type="text/css" href="../resources/css/styles.css">
@@ -12,6 +12,9 @@
     <script src="../resources/js/features.js"></script>
     <script src="../resources/js/media.js"></script>
     <script src="../resources/js/windows/resume.js"></script>
+    <script src="../resources/js/windows/projects.js"></script>
+    <script src="../resources/js/windows/api.js"></script>
+
 </head>
 
 <body>
@@ -35,7 +38,7 @@
                 <br>
                 <br>
                 <button style="display: inline-block;" onclick="playMp3(0, 'startup.mp3'); logIn()">Okay</button>
-                <button style="display: inline-block;" onclick="this.innerText = 'No'">Cancel</button>
+                <button style="display: inline-block;" onclick="logIn(true)">Quick Login</button>
 
 
             </div>
@@ -64,6 +67,27 @@
             <div class="pure-u-1-24 desktopIconSlot" ondblclick="resumeWindow(); refreshDrag('window')">
                 <img class="desktopIcon" src="../resources/icons/document.png">
                 <p class="desktopIconName">Resume.pdf</p>
+            </div>
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-1-24 desktopIconSlot"
+                ondblclick="window.open('https:\/\/www.linkedin.com/in/ajnicoloff/', '_blank')">
+                <img class="desktopIcon" src="../resources/icons/url.png">
+                <p class="desktopIconName">LinkedIn</p>
+            </div>
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-1-24 desktopIconSlot"
+                ondblclick="projectsWindow(); refreshDrag('window')">
+                <img class="desktopIcon" src="../resources/icons/note.png">
+                <p class="desktopIconName">Projects</p>
+            </div>
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-1-24 desktopIconSlot"
+                ondblclick="apiWindow(); refreshDrag('window')">
+                <img class="desktopIcon" src="../resources/icons/world.png">
+                <p class="desktopIconName">API</p>
             </div>
         </div>
     </div>

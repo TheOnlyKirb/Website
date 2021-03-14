@@ -14,7 +14,6 @@ webserver.set('views', path.join(__dirname, '/main/views'));
 webserver.use('/resources', express.static(path.join(__dirname, '/main/resources')))
 webserver.use('/media', express.static(path.join(__dirname, '/main/media')))
 
-
 // More config
 
 // yes yes this is deprecated, ill fix it later
