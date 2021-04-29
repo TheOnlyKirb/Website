@@ -33,7 +33,7 @@ function apiWindow() {
     resWindowBodyP.innerHTML = `
     <h4 style="margin: auto;">API Documentation/Endpoints</h4>
     <hr style="width: 50%; margin: "auto">
-    WIP.
+    Please head over to linkedweb.org/docs - I'll eventually update this window, but for now- that's where it is ;)
     `
     resWindowBody.appendChild(resWindowBodyP)
     resWindow.appendChild(resWindowBody)
